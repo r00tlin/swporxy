@@ -1,0 +1,46 @@
+##############################
+#全局变量设置                  #
+##############################
+global:
+
+  #超时设置
+  #单位为秒
+  timeout: 10
+  #
+  #编码限定
+  coding: "utf-8"
+  #
+  #证书位置，默认会使用mitmproxy生成的证书，如果需要使用自己的证书，请在这里配置路径
+  swcrt:
+  swpem:
+  #
+  #mysqlurl数据库地址
+  mysqldbc: "mysql+pymysql://root:password@127.0.0.1/swproxy?charset=utf8mb4" #日常
+  #
+  #sqlite数据库地址
+  sqlitedbc: "sqlite:///{rootpath}/databases/swproxy.db"
+
+
+
+####################
+#代理模块配置        #
+####################
+httpproxy:
+  #
+  #检测/替换规则地址
+  rulepath: "httpproxy.json"
+  #
+  #代理服务器地址
+  proxyserver: "0.0.0.0"
+  #
+  #代理服务器端口
+  proxyport: 10800
+  #
+  #最大存储长度(个字符)，0表示不限制长度，主要用于处理http(s)响应内容过大的问题
+  maxlength: 0
+  #
+  #入库条数，达到以后会进行进行一次入库操作
+  maxnum: 1
+  #
+  #入库时间间隔，达到以后会进行一次入库操作
+  timestamp: 30
