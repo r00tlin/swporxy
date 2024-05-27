@@ -15,10 +15,10 @@ global:
   swpem:
   #
   #mysqlurl数据库地址
-  mysqldbc: "mysql+pymysql://root:password@127.0.0.1/swproxy?charset=utf8mb4" #日常
+  dbc: "mysql+pymysql://root:password@127.0.0.1/swproxy?charset=utf8mb4" #日常
   #
   #sqlite数据库地址
-  sqlitedbc: "sqlite:///{rootpath}/databases/swproxy.db"
+  #dbc: "sqlite:///{rootpath}/databases/swproxy.db"
 
 
 

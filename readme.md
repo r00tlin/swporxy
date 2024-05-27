@@ -6,9 +6,7 @@
 2. 下载代码  
 3. 安装第三方库  
 `pip3 install -r requirements.txt`
-4. 创建数据库  
-```CREATE SCHEMA `swproxy` DEFAULT CHARACTER SET utf8mb4 ;```
-5. 导入自定义/mitmproxy证书(否则无法在https场景中使用)，可以参考文档：https://www.jianshu.com/p/036e5057f0b9
+4. 导入自定义/mitmproxy证书(否则无法在https场景中使用)，可以参考文档：https://www.jianshu.com/p/036e5057f0b9
 
 ## 配置
 1. 自定义你的项目配置，对应的文件是config.yaml，可以配置代理端口、数据库账号等信息

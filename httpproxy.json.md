@@ -33,7 +33,7 @@ swproxy代理是通过httpproxy.json文件进行配置的，文件内容为json�
     },
     {
       "id": 2,
-      "script": "replaceua"
+      "script": "ReplaceUA"
     },
     {
       "id": 3,
@@ -47,7 +47,7 @@ swproxy代理是通过httpproxy.json文件进行配置的，文件内容为json�
   "store": [
     {
       "id": 4,
-      "script": "storedata"
+      "script": "StoreData"
     },
     {
       "id": 5,

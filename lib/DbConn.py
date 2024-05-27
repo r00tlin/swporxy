@@ -19,7 +19,7 @@ Base = declarative_base()
 
 
 class BaseConn:
-    dbc: str = config.globalvar.get("mysqldbc")
+    dbc: str = config.globalvar.get("dbc")
     if dbc.startswith("sqlite"):
         dbc = dbc.replace("{rootpath}", rootpath)
 
