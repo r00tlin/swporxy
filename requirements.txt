@@ -2,3 +2,5 @@ PyYAML
 colorama
 SQLAlchemy
 mitmproxy
+pymysql
+pyyaml

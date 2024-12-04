@@ -26,10 +26,10 @@ class BaseConn:
     # 如果不存在则创建数据库
     else:
         engine = create_engine(dbc.replace(dbc[dbc.rfind("/"):], "/mysql"))
-        create_database_query = f"CREATE DATABASE IF NOT EXISTS {dbc.split('/')[-1].split('?')[0]}"
-        engine.execute(create_database_query)
-        # 关闭引擎连接
-        engine.dispose()
+        with engine.connect() as connection:
+            create_database_query = f"CREATE DATABASE IF NOT EXISTS {dbc.split('/')[-1].split('?')[0]}"
+            connection.execute(text(create_database_query))
+
 
     # 重新创建引擎
     engine = create_engine(dbc)

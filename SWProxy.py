@@ -108,7 +108,7 @@ async def start_server(task_id, proxy_mode=None):
     opts = options.Options(
         listen_host=proxy_host,
         listen_port=proxy_port,
-        mode=proxy_mode[0]
+        mode=[proxy_mode[0]]
     )
     opts.add_option("body_size_limit", int, 0, "")
     opts.add_option("keep_host_header", bool, True, "")
